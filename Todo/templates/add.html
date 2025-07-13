@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Todo</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="navbar">
+        <div><strong>Todo App</strong></div>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'view' %}">View Todos</a>
+            <a href="{% url 'add' %}">Add Todo</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Add Todo</h2>
+
+        <form method="post" class="add-todo-form">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Todo Name" required>
+
+            <!-- Completed Checkbox -->
+            <label style="margin-bottom: 15px;">
+                <input type="checkbox" name="completed" style="margin-right: 10px;">
+                Mark as Completed
+            </label>
+
+            <textarea name="description" placeholder="Todo Description" rows="4" required></textarea>
+            <input type="submit" value="Add Todo">
+        </form>
+
+    </div>
+
+</body>
+</html>

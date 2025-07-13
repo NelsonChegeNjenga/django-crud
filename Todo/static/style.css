@@ -1,0 +1,148 @@
+body {
+    background-color: #0a1930;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #102542;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #00b4d8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #13293d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00b4d8;
+}
+
+.names {
+    font-size: 22px;
+    line-height: 2em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="date"], textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #1c2d45;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: #00b4d8;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0090b0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1c2d45;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #33475b;
+}
+
+.action-links a {
+    margin-right: 10px;
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Additional styles specifically for Add Todo form --- */
+
+.add-todo-form {
+    background: #1e3555;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.08);
+}
+
+.add-todo-form input[type="text"],
+.add-todo-form input[type="datetime-local"],
+.add-todo-form textarea {
+    background: #243b5e;
+    color: #fff;
+    border: 1px solid #33475b;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.add-todo-form input[type="submit"] {
+    background-color: #00b4d8;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-todo-form input[type="submit"]:hover {
+    background-color: #0085a1;
+}
+
+/* --- New checkbox styling for completed field --- */
+
+.add-todo-form label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.add-todo-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #00b4d8; /* modern browsers support this for checkbox color */
+}
