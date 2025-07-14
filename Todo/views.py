@@ -14,7 +14,7 @@ def add(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         description = request.POST.get('description')
-        completed = request.POST.get('completed')
+        completed = request.POST.get('completed', 'off')
         todo = Todo(name=name, description=description, completed=completed)
         todo.save()
         messages.success(request, 'Todo added successfully')
@@ -26,7 +26,7 @@ def edit(request,pk):
     if request.method == 'POST':
         todo.name = request.POST.get('name')
         todo.description = request.POST.get('description')
-        todo.completed = request.POST.get('completed', False)
+        todo.completed = request.POST.get('completed', 'off')
         todo.save()
         messages.success(request, 'Todo updated successfully')
         return redirect('view')

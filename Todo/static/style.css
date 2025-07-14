@@ -85,9 +85,11 @@ table {
 }
 
 th, td {
-    padding: 12px;
+    padding: 20px 12px;        /* Bigger space inside cells */
+    line-height: 1.8em;         /* Increase text height */
     border-bottom: 1px solid #ddd;
     color: #111;
+    vertical-align: middle;     /* Vertically center the content */
 }
 
 .action-links a {

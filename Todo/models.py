@@ -6,7 +6,8 @@ class Todo(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    completed = models.CharField(max_length=10, default="False")  # ✅ Fixed
+    completed = models.CharField(max_length=10, default='off')
+
 
 
     def __str__(self):
