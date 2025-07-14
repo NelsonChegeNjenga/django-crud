@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['crud-grhm.onrender.com', '127.0.0.1', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://crud-grhm.onrender.com',
+]
+
 
 # Application definition
 
